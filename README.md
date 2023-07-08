@@ -18,7 +18,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>List of Prerequisites</h2>
 
-- Create a Resource Group in azure
+- Create a Resource Group in Azure
 - Create a Windows 10 Virtual Machine (VM) with 2-4 Virtual CPUs
 - A new Virtual Network (Vnet)
 - Install PHP Manager for IIs
@@ -83,10 +83,10 @@ Now we are going to install PHP manager, rewrite module, and PHP 738 also we are
 
  Now we need to create PHP on the C drive in file explorer, go to the C drive and right click and press new folder and call it PHP.
 
- After that, go back to the Installation files and download PHP 738. This is an old version of PHP, so your computer might have trouble downloading. But a yellow triangle will show up on the top right corner, just click on that downloads should pop up. Just click the three little dots and click keep and then keep anyways and it should download.
+ After that, go back to the Installation files and download PHP 738. This is an old version of PHP, so your computer might have trouble downloading it. But a yellow triangle will show up on the top right corner, just click on that downloads should pop up. Just click the three little dots and click keep and then keep anyways and it should download.
  *use the pictures for help
 
- Now in file explore, go back to download a right click PHP 738 and select extract all and for the destination, you can type C:\PHP and press Extract.
+ Now in file Explore, go back to download a right click PHP 738, and select extract all and for the destination, you can type C:\PHP and press Extract.
  
 </p>
 <br />
@@ -120,7 +120,7 @@ Now it should ask you to make a password you need to remember this so write it d
    First, click on start Type IIS and run as an administrator then double click PHP manager icon and click on register new PHP version and brows in the PHP folder you just made and click PHP-CGI.
    *Use the picture above for help
 
-   Lastly, click VM-ticket on the left then restart on the right under the manger server.
+   Lastly, click VM-ticket on the left then restart on the right under the manager server.
   </p>
   <br />
   
@@ -137,8 +137,19 @@ Now it should ask you to make a password you need to remember this so write it d
   <img src="https://i.imgur.com/knGt4z6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
   </p>
   <p>
-  ;dkcdslnvlsjdnjdnvlsjdvlvjajfbnlfvnisvidasvnidfdjf;davjv;adv;advnsdfvn;adsvn;sdvn;vs
-  
+  Now we are going to install osTicket
+
+  First download osTicket from the installation files
+
+  Now we are going to extract and copy the upload folder from the osTicket download to C:\inetpud\wwwroot
+
+  So open two file explorer pages and on one of them double click the osTicket download and there should be an upload folder inside.
+
+  Now in the second one go to the C drive and click inetpud then click wwwroot.
+
+  Then click the upload folder and drag it to wwwroot you can use the pictures for help.
+
+  Once it's finished copying rename the upload file in wwwroot folder to osTicket.
   </P>
   <br />
   
@@ -152,7 +163,11 @@ Now it should ask you to make a password you need to remember this so write it d
   <img src="https://i.imgur.com/rd0pwIR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
   </p>
   <p>
-  sajiisdiasdisdifiasisciadclabdsn
+  Now were are going to start setting up osTicket in the browser, first refresh IIS.
+
+  Now click on sites then default website and osTicket on the left and on the right click browse 80. OsTicket should pop up on a browser with a couple of extensions disabled.
+
+   So go back to IIS and click php manager and at the bottom click enable or disable an extension and enable PHP.Imap.dll, Intl.dll, and opcache.dll then refresh and they should become green on the osTicket site.
   </p>
   <br />
   
@@ -172,7 +187,13 @@ Now it should ask you to make a password you need to remember this so write it d
     <img src="https://i.imgur.com/9CT7bSJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-  vnknkd.vnkdsvndavnldv ad;lc;ladcm;adco;d;mdmck;mcamk;cdak;mdcak slcmcmkacsm;sakmcskcmk;ascmkcsmsckm;kcsamascmsa;kmcas;kmc;ksccs l;asas;mdcmcsmcs;csa
+  Now we are going to rename ost-sample-config.php to ost-config.php.
+
+   So open file explore go to the c: drive click inetpud then click wwwroot then osTicket then find include and click on it then in include scroll down until you find ost-config and right-click on rename it ost-config.
+
+   Now we are going to change the Permissions so everyone has access to the file.
+
+   So now right-click the file and go to properties, in properties go to security then go down to advanced in the advanced security settings disable inheritance. Then click Remove all inherited Permissions then you need to add permissions so press add then click Select a principal then type everyone and press ok, then check the full control box, press ok then click apply and ok.
   </p>
   <br />
   
@@ -187,7 +208,15 @@ Now it should ask you to make a password you need to remember this so write it d
   <img src="https://i.imgur.com/Z0Y9L8s.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
   </p>
   <p>
-  sakschailhcd;ichischiachladsclshslachsaliichsalichalishcsaliclsachiliaschilascsalclsacaslclascalscsalicsalclasclsaclascliscalisaccsliahcsalhcslcshilaschalschcaslhcslaschlschcsalihaslhsa
+  Now we are going to continue setting up osTicket in the browser.
+
+  Press continue and just fill out the osTicket Basic installation page and write them down because you'll need them later, especially your username and password. Once you get to database settings stop because you need to download Heidi SQL.
+
+  So go to your installation files to download Heidi SQL once it downloads go to your downloads folder and double-click it accept everything and install it and press finish.
+
+  It should open up on the bottom left press new for the username make sure it's root and the password is the one you made for MY SQL and press open, name it osTicket then press ok.
+
+  Now go back to Database settings and finish setting up osTicket and press install now.
   </P> 
   <br />
   
@@ -203,11 +232,19 @@ Now it should ask you to make a password you need to remember this so write it d
     <img src="https://i.imgur.com/dSPer9f.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
     </p>
     <p>
-  sakcnak;scnas;cnascnacsnclsn;snas;ojcaoj;asciflhdkuvislafsafijdsa;dsk;oadkasdk;avc
+  Now we need to do a little cleanup.
+   First, you need to delete the setup folder. So go to file explore and in the bar type C:\inetpud\wwwroot\osticket and scroll down to setup right click it and click delete.
+
+   Now I want you to scroll up to include and click into the PHP folder and go to the ost-config so we can change it back to read-only. So right-click it and go to Properties then the security tab then go to Advance. Then click everyone and then click edit write then click ok apply and ok again.
   </p>
   <br />
   
   <p>
       <img src="https://i.imgur.com/JbrDW05.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
   <img src="https://i.imgur.com/hCW1SeK.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-  
+  </p>
+  <p>
+  Now copy the URL into your virtual machine and log into osTicket with the username and password you made and you're done.
+  http://localhost/osTicket/scp/login.php
+  </p>
+  <br />
