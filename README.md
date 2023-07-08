@@ -38,7 +38,16 @@ https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6
   <img src="https://i.imgur.com/3Dkbu44.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+First You want to make a resource group you can call Os-Ticket or whatever you want just remember what region you put it in. 
+
+ Now you want to make a virtual machine, when you make the virtual machine make sure you put it in the resource group you just made and put it in the same region.
+
+ After that use a Windows 10 image and for the size you can choose any size that has 4 CPUs.
+
+ Then make a password and username and write it down for later. Then just click the box at the bottom of the page and click Review and Create.
+
+ Now go to Your Virtual Machine and get the. IP address and copy and paste it on a remote Desktop if you have an Apple computer you'll need to download it from the Apple store.
+ *use the pictures above to see what it should look like.
 </p>
 <br />
 
@@ -47,9 +56,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   <img src="https://i.imgur.com/EuaEyPA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-  
+Now you want to install and enable IIS with CGI.
 
+To do that you can go to the start menu search bar and search the control panel then select program, after that under programs and features select turn Windows features on or off then a page should pop up that looks like the pictures above.
+
+Now just look through the list to find Internet information services, check its box and expand its list and find worldwide Web services and expand it to find application and development features, expand that to find CGI you can use the picture for help.   
+  
+Lastly, go under world wide web services and expand common HTTP Features and make sure all the boxes are checked and click ok and it should start installing IIS.
 </p>
 <br />
 
@@ -62,7 +75,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     <img src="https://i.imgur.com/mZDDVjj.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now we are going to install PHP manager, rewrite module, and PHP 738 also we are going to create a directory C:\PHP and unzip PHP 738 contents in C:\PHP.
+
+ First, copy the installation files link and open up internet explore on your virtual machine and download PHP Manager and install it, you can next through the setup.
+
+ Then go back to the installation files and download and install the Rewrite module.
+
+ Now we need to create PHP on the C drive in file explorer, go to the C drive and right click and press new folder and call it PHP.
+
+ After that, go back to the Installation files and download PHP 738. This is an old version of PHP, so your computer might have trouble downloading. But a yellow triangle will show up on the top right corner, just click on that downloads should pop up. Just click the three little dots and click keep and then keep anyways and it should download.
+ *use the pictures for help
+
+ Now in file explore, go back to download a right click PHP 738 and select extract all and for the destination, you can type C:\PHP and press Extract.
+ 
 </p>
 <br />
 
@@ -72,7 +97,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   <img src="https://i.imgur.com/pwQsDsP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
   </p>
   <p>
-  sandlanclvcnjdc sdndlc d sakckad dc sakckasckscnkcnskcnkcsdncncdsjncdsjcjvsdjbsdvjbvsddbvsjsdvbjdvbjsdvbsjdvbdkjvskbkdv djlncjdvbnjdvsdvksbdksbdskbvsdbvksdbvdksbkvdbdvshbsdkbhsdshbhdksvbsdkhbhdksbdvshbdvbdhskbvdshkbvdshbdsvkdsvkhvdskdv
+  Now we are downloading and installing C++ and MYSQL
+
+   First, go back to the install files and download and install Vc. 
+
+Next, download MYSQL, and in the installation setup, do a typical install and install it then it's going to ask about the configuration, then make sure to install it as Windows service box is checked, then select next.
+
+Now it should ask you to make a password you need to remember this so write it down if you need to then press next and execute then finish.
   </p>
   <br />
   
@@ -84,7 +115,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   <img src="https://i.imgur.com/Q8IUK4h.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
   </p>
   <p>
-  dsljcm sdjcdjmdcmjdsmjdcmcdsmjdjmcmjcdjmds saksacmaskmawidojdfuvrwuvdwvni saacncadjnvodasvnuvdneniadenvidauvndainvadunvidavnidavnvdsvd asocadoscnoacnoascnsauodcndunevuduvbvdbvdsbvdsvbdskvbdkshbdvssdvhiuascdacadnvkjdvnasdvnudvnoaenasonad
+  Now we are going to register PHP from within IIS
+
+   First, click on start Type IIS and run as an administrator then double click PHP manager icon and click on register new PHP version and brows in the PHP folder you just made and click PHP-CGI.
+   *Use the picture above for help
+
+   Lastly, click VM-ticket on the left then restart on the right under the manger server.
   </p>
   <br />
   
